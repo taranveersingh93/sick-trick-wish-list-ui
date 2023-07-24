@@ -10,9 +10,9 @@ const TrickCard = ({stance, name, obstacle, tutorial, id}) => {
   return (
   <div className="trick-card" id={id}>
     <p>{correctCase(stance)}{" "}{correctCase(name)}</p>
-    <p>Obstacle: {correctCase(obstacle)}</p>
+    <p className='obstacle'>Obstacle: {correctCase(obstacle)}</p>
     <p>Link to tutorial:</p>
-    <a href={tutorial}>{tutorial}</a>
+    <a className="tutorial"href={tutorial}>{tutorial}</a>
   </div>
   )
 }
