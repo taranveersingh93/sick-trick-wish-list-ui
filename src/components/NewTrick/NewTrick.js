@@ -4,12 +4,12 @@ const NewTrick = ({stance, handleStance, trick, handleTrick, obstacle, handleObs
   return (
     (
       <form className="new-trick">
-        <select className="select-class"id="trick-select" value={stance} onChange={(e) => handleStance(e)}>
+        <select id="trick-select" value={stance} onChange={(e) => handleStance(e)}>
           <option value="placeholder">Choose your Stance</option>
-          <option value="regular">Regular</option>
-          <option value="switch">Switch</option>
+          <option className="regular"value="regular">Regular</option>
+          <option className="switch" value="switch">Switch</option>
         </select>
-        <input type='text' value={trick} placeholder='Name of Trick' onChange={(e) => handleTrick(e)} />
+        <input type='text' id="trick-input" value={trick} placeholder='Name of Trick' onChange={(e) => handleTrick(e)} />
         <select id='obstacle-select' value={obstacle} onChange={(e) => handleObstacle(e)}>
           <option value="placeholder">Choose your Obstacle</option>
           <option value="flatground">Flatground</option>
@@ -18,7 +18,7 @@ const NewTrick = ({stance, handleStance, trick, handleTrick, obstacle, handleObs
           <option value="stairs">Stairs</option>
           <option value="pool">Pool</option>
         </select>
-        <input type='text' value={tutorial} placeholder='Link to tutorial' onChange={(e) => handleTutorial(e)} />
+        <input type='text' className='tutorial-input' value={tutorial} placeholder='Link to tutorial' onChange={(e) => handleTutorial(e)} />
         <button onClick={(e)=>handleSubmit(e)}>Send It!</button>
       </form>
     )
