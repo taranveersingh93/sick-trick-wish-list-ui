@@ -1,8 +1,16 @@
+import './TrickCard.css'
+
+const correctCase = (word) => {
+  const letters = word.split("");
+  const newLetters = [letters[0].toUpperCase(), ...letters.splice(1)]
+  return (newLetters.join(""))
+}
+
 const TrickCard = ({stance, name, obstacle, tutorial, id}) => {
   return (
   <div className="trick-card" id={id}>
-    <p>{stance}{" "}{name}</p>
-    <p>Obstacle: {obstacle}</p>
+    <p>{correctCase(stance)}{" "}{correctCase(name)}</p>
+    <p>Obstacle: {correctCase(obstacle)}</p>
     <p>Link to tutorial:</p>
     <a href={tutorial}>{tutorial}</a>
   </div>
