@@ -4,7 +4,7 @@ const NewTrick = ({stance, handleStance, trick, handleTrick, obstacle, handleObs
   return (
     (
       <form className="new-trick">
-        <select id="trick-select" value={stance} onChange={(e) => handleStance(e)}>
+        <select className="select-class"id="trick-select" value={stance} onChange={(e) => handleStance(e)}>
           <option value="placeholder">Choose your Stance</option>
           <option value="regular">Regular</option>
           <option value="switch">Switch</option>
